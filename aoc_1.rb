@@ -13,8 +13,16 @@ sliced_arr.each do |arr|
   summed << arr.sum
 end
 
-p summed.each_with_index.max[1]
+# part 1
 
-p summed[126]
+# p summed.each_with_index.max[1]
+
+# p summed[126]
+
+sorted_arr = summed.sort do |a, b|
+  b <=> a
+end
+
+puts (sorted_arr[0] + sorted_arr[1] + sorted_arr[2])
 
 file.close
